@@ -54,6 +54,16 @@ nav ul li a:hover{
 .leftsection{
     font-size: 3rem;
 }
+.leftsection .btn{
+    margin-top: 30px;
+    padding: 12px;
+    background: #a7a8c3;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
 .purplr{
     color: rgb(156, 83, 224);
 }
@@ -114,13 +124,24 @@ main hr{
     
 }
 footer{
+    background-color: rgb(27, 21, 54);
+    height: 160px;
     
 }
 .footer{
-    height: 140px;
-    background-color: grey;
-    padding: 31px;
+   display: flex;
+   padding: 23px 60px;
+   justify-content: space-evenly;
 }
-.footer .first-f{
-    display: flex;
+
+.footer ul{
+    list-style: none;
+}
+.footer > div{
+    width: 250px;
+}
+footer .footer-rights{
+    text-align: center;
+    color: grey;
+    padding: 12px 0;
 }
