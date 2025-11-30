@@ -103,8 +103,14 @@ nav ul li a:hover {
 }
 
 .hero-image {
-    flex: 1 1 250px;
-    text-align: center;
+    
+     width: 100%;          
+    max-width: 400px;      
+    height: auto;          
+    border-radius: 12px;   
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5); 
+    display: block;
+    margin: 0 auto;
 }
 
 .about-content {
@@ -261,5 +267,15 @@ hr {
 
     .hero-text h1 {
         font-size: 1.8rem;
+    }
+}@media (max-width: 768px) {
+    .hero-image img {
+        max-width: 300px;  
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image img {
+        max-width: 200px; 
     }
 }
