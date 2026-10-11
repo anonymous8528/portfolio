@@ -20,7 +20,6 @@
   { "title": "Core computer science concepts", "text": "Core concepts: data structures and algorithms (DSA), OOP, MVC architecture, system design basics, and Agile / Git workflow." },
   { "title": "GenAI and AI skills", "text": "GenAI topics on Anuj's portfolio: large language models, RAG, vector databases, prompting, agentic AI, AI agents, and LangChain/LangGraph. He has worked with OpenAI API integration, covering completions, streaming responses with SSE, and function calling. He is still learning AI engineering through a structured roadmap." },
   { "title": "Testing and tools", "text": "Testing and tools: Jest for automated tests, Postman for API testing, and Git and GitHub for version control. His portfolio highlights 50+ tests written." },
-  { "title": "Python and data skills", "text": "Python and Pandas, shown in a live retail sales analysis project. He is also building SQL, Excel and Power BI skills as part of a data analyst upskilling track." },
   { "title": "DevOps level", "text": "Docker and CI/CD with GitHub Actions are at course-project level, not production experience." },
   { "title": "Node.js internals", "text": "Anuj understands Node.js core concepts: the event loop, the V8 engine, libuv and asynchronous I/O." },
   { "title": "Coursework-level only", "text": "SAS, Mainframe and ServiceNow are coursework or training-level exposure only. Anuj has no hands-on production experience with them." },
@@ -33,7 +32,6 @@
   { "title": "Project: HomeVista Interior", "text": "HomeVista Interior is a full-stack platform for a live interior design business. It has a JWT-secured admin dashboard with lead lifecycle management (New, Contacted, Site Visit, Completed), Multer image upload, and WhatsApp API integration for client notifications. Deployed on Render and Vercel." },
   { "title": "HomeVista tech stack", "text": "HomeVista Interior is built with MongoDB, Express.js, React.js, Node.js, JWT, Multer, Vercel and Render." },
   { "title": "Project: Bank Management System", "text": "Bank Management System is a Java project using JDBC and MySQL. It shows his core Java and database skills." },
-  { "title": "Project: retail sales analysis", "text": "A live retail sales analysis project built with Python and Pandas. It shows his Python and data analysis skills." },
   { "title": "Project: school website redesign", "text": "For an internship assessment, Anuj built a full MERN redesign of a school website: Vite + React frontend, Express and MongoDB backend, deployed on Vercel." },
   { "title": "Project links", "text": "LocalServe: live at local-service-booking-six.vercel.app, code at github.com/anonymous8528/local-service-booking. Citi Care: live at anonymous8528.github.io/citi-care-/, code at github.com/anonymous8528/citi-care. HomeVista Interior: live at homevista-interior.vercel.app, code at github.com/anonymous8528/homevista-interior." },
 
