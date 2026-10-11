@@ -229,7 +229,7 @@ const payload = {
   reply: reply || "Sorry, I couldn't come up with an answer.",
   sources: relevant.map((t) => t.c.title),
 };
-    if (!history.length && reply && !notified && releaseEvents.length > 0) {
+    if (!history.length && reply && !notified && relevant.length > 0) {
       if (cache.size >= 100) cache.clear();
       cache.set(cacheKey, payload);
     }
