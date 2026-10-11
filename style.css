@@ -50,7 +50,11 @@ body {
   overflow-x: clip;
 }
 
-img, svg { max-width: 100%; }
+img, svg {
+ max-width: 100%;
+height: auto;
+display:block;
+ }
 a { color: inherit; }
 ul { list-style: none; }
 
