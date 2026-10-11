@@ -11,6 +11,7 @@ const EMBED_MODEL = process.env.GEMINI_EMBED_MODEL || "gemini-embedding-001";
 const API = "https://generativelanguage.googleapis.com/v1beta";
 const RESEND_KEY = process.env.RESEND_API_KEY; // optional: needed only for the notify tool
 const NOTIFY_TO = process.env.NOTIFY_EMAIL;    // optional: your own email (the one you signed up to Resend with)
+const SEARCH_ON = process.env.ENABLE_SEARCH === "true"; // Google Search grounding: needs a paid Gemini plan, so it is OFF by default
 
 // ---------- Gemini helpers (with automatic retry on rate limits) ----------
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -79,9 +80,7 @@ const tools = [{
       required: ["visitor_name", "contact", "message"],
     },
   }],
-},
-{ google_search: {}},
-];
+}];
 
 const notifyLog = new Map(); // ip -> timestamps (max 3 notifications per hour per visitor)
 
@@ -188,16 +187,26 @@ ${context}`;
     let notified = false;
 
     for (let step = 0; step < 3; step++) {
-      const out = await gemini(`models/${CHAT_MODEL}:generateContent`, {
+      const request = (toolList) => ({
         systemInstruction: { parts: [{ text: system }] },
         contents,
-        tools,
+        tools: toolList,
         generationConfig: {
           temperature: 0.2,
           maxOutputTokens: 600,
           ...(CHAT_MODEL.includes("2.5") ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
         },
       });
+
+      let out;
+      if (SEARCH_ON) {
+        try {
+          out = await gemini(`models/${CHAT_MODEL}:generateContent`, request([...tools, { google_search: {} }]), 1);
+        } catch (e) {
+          console.error("Google Search grounding unavailable, answering without it:", e.message.slice(0, 160));
+        }
+      }
+      if (!out) out = await gemini(`models/${CHAT_MODEL}:generateContent`, request(tools));
 
       const content = out.candidates?.[0]?.content;
       const parts = content?.parts || [];
