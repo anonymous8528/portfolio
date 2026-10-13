@@ -75,7 +75,7 @@ portfolio/
 
 | | |
 |---|---|
-| 📧 Email | [canuj8528@gmail.com](mailto:canuj8528@gmail.com) |
+| 📧 Email | [canuj8528@gmail.com](mailto:anujchaudhary8528@gmail.com) |
 | 💼 LinkedIn | [linkedin.com/in/anuj-chaudhary-34b9aa284](https://linkedin.com/in/anuj-chaudhary-34b9aa284) |
 | 🐙 GitHub | [github.com/anonymous8528](https://github.com/anonymous8528) |
 | 📍 Location | Lucknow, Uttar Pradesh · Open to Noida / Remote |
